@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #360568;
+  --color-brand-lavender: #C8B6FF;
+  --color-brand-periwinkle: #9D84FF;
+  --color-brand-mint: #B7E4C7;
+  --color-brand-dark: #000000;
+  --color-brand-surface: #070310;
+  --color-brand-surface-elevated: #130626;
+  --color-brand-surface-glass: rgba(19, 6, 38, 0.6);
+
+  --font-sans: 'Outfit', sans-serif;
+}
+
+@layer utilities {
+  .glass-panel {
+    background-color: var(--color-brand-surface-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(200, 182, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(54, 5, 104, 0.4);
+  }
+  .glow-text {
+    text-shadow: 0 0 20px rgba(200, 182, 255, 0.6);
+  }
+  .glow-box {
+    box-shadow: 0 0 40px rgba(157, 132, 255, 0.2);
+  }
+  .glow-box-hover:hover {
+    box-shadow: 0 0 60px rgba(157, 132, 255, 0.4);
+  }
+}
+
+body {
+  background-color: var(--color-brand-dark);
+  color: white;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
